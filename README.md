@@ -14,7 +14,23 @@ pip install -r requirements.txt
 
 ## 使い方
 
-### 指定URLから情報を取得
+### Web UI（推奨）
+
+URL またはキーワードから複数サイトを取得し、Excel / CSV / テキスト / JSON でダウンロードできます。
+
+```bash
+python app.py
+```
+
+ブラウザで http://127.0.0.1:5000 を開き、
+
+- **URL を指定**: テキストエリアに1行1件でURLを入力（最大30件）
+- **キーワードで検索**: キーワードを入力すると検索で得たURLを自動で取得（DuckDuckGo 検索）
+- **出力形式**: Excel / CSV / テキスト / JSON を選択して「取得してダウンロード」でファイルがダウンロードされます
+
+robots.txt の確認とリクエスト間隔はデフォルトで有効です。
+
+### CLI: 指定URLから情報を取得
 
 ```bash
 python scrape.py https://example.com
